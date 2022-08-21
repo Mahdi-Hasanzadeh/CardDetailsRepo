@@ -5,10 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interactive Card Details Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello world</h1>
+    <div class="body">
+        <div class="content">
+            <img id="img" src="folder/images/bg-main-desktop.png" alt="">
+            <img class="img1" id="front" src="folder/images/bg-card-front.png" alt="">
+            <img class="img1" id="back" src="folder/images/bg-card-back.png" alt="">
+            <p class="BankName">Master Card</p>
+            <p class="f">6362 1411 2609 7592 </p>
+            <p class="CardHolderName"><small>Mahdi Hasanzadeh</small></p>
+            <p class="MMYYDate"><small>09/09</small></p>
+            <p class="CVCS"><small>CVC:</small></p>
+            <p class="CVCNUMBER"><small>5782</small></p>
+            <p class="Debit">Debit Card</p>
+        </div>
+        <div class="formContainer">
+            <div class="form">
+                <div class="Inputname">
+                    <label for="cardHolder">* CARDHOLDER NAME</label>
+                    <br>
+                    <input name="cardHolder" required size="28px" type="text" placeholder="e.g. Mahdi Hasanzadeh">
+                </div>
+                <br>
+                <div class="CardInput">
+                    <label for="">* CARD NUMBER</label>
+                    <br>
+                    <input type="text" required size="28px" placeholder="e.g. 1234 4567 8912 0000">
+                    <p style="font-size: 11px; color: lightcoral;"><small>Wrong format, number only</small></p>
+                </div>
+                <br>
+                <div class="wrap">
+                    <div class="cardExp">
+                        <label for="">* EXP.DATE<samll>(MM/YY)</samll></label>
+                        <br>
+                        <input type="text" required name="" id="" size="5px" placeholder="MM">
+                        <input type="text" required placeholder="YY" size="5px">
+                    </div>
+                    <div class="CVC">
+                        <label for="">* CVC</label>
+                        <br>
+                        <input size="5px" required type="text" placeholder=" e.g. 123">
+                    </div>
+                </div>
+                <br>
+                <button>Confirm</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

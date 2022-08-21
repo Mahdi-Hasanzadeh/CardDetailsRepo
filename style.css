@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  display: flex;
+  flex-wrap: wrap;
+}
+#img {
+  width: 350px;
+  height: 409px;
+}
+.img1 {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+}
+#front {
+  top: 50px;
+  left: 140px;
+}
+#back {
+  top: 220px;
+  left: 100px;
+}
+.f {
+  position: absolute;
+  top: 135px;
+  left: 155px;
+  color: white;
+  letter-spacing: 4px;
+}
+.BankName {
+  position: absolute;
+  top: 80px;
+  left: 229px;
+  color: white;
+  text-shadow: 1px 1px 10px red;
+}
+.Debit {
+  position: absolute;
+  top: 345px;
+  left: 106px;
+  color: #000000;
+}
+.CVCNUMBER {
+  position: absolute;
+  top: 285px;
+  left: 285px;
+  color: #000000;
+}
+.CVCS {
+  position: absolute;
+  top: 285px;
+  left: 251px;
+  color: #000000;
+}
+.CardHolderName {
+  position: absolute;
+  top: 175px;
+  left: 155px;
+  color: white;
+  letter-spacing: 1px;
+}
+.MMYYDate {
+  position: absolute;
+  top: 175px;
+  left: 330px;
+  color: white;
+}
+input {
+  text-align: center;
+}
+.body {
+  display: flex;
+  justify-content: space-around;
+}
+.formContainer {
+  width: 50%;
+  height: 395px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.Inputname {
+  padding: 2px;
+}
+.CardInput {
+  padding: 2px;
+}
+.cardExp {
+  padding: 2px;
+}
+.CVC {
+  padding: 2px;
+}
+.wrap {
+  display: flex;
+  justify-content: space-around;
+}
+label {
+  font-size: small;
+  font-family: Courier New, Courier, monospace;
+}
+button {
+  width: 220px;
+  background-color: #0561c9;
+  color: white;
+}
