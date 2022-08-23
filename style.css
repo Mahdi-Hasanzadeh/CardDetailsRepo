@@ -2,87 +2,148 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin: auto;
 }
 .body {
   display: flex;
   flex-wrap: wrap;
 }
 #img {
-  width: 350px;
-  height: 409px;
+  width: 565px;
+  height: 624px;
 }
 .img1 {
   position: absolute;
-  width: 250px;
-  height: 150px;
+  width: 310px;
+  height: 200px;
 }
 #front {
-  top: 50px;
-  left: 140px;
+  top: 120px;
+  left: 170px;
 }
 #back {
-  top: 220px;
-  left: 100px;
+  top: 360px;
+  left: 197px;
 }
 .f {
+  border: 1px solid white;
+  width: 232px;
+  height: 26px;
   position: absolute;
-  top: 135px;
-  left: 155px;
+  top: 217px;
+  left: 207px;
   color: white;
   letter-spacing: 4px;
+  text-align: center;
+  padding-top: 3px;
 }
 .BankName {
+  font-size: 22px;
   position: absolute;
-  top: 80px;
-  left: 229px;
+  top: 154px;
+  left: 265px;
   color: white;
   text-shadow: 1px 1px 10px red;
 }
 .Debit {
   position: absolute;
-  top: 345px;
-  left: 106px;
+  top: 535px;
+  left: 202px;
   color: #000000;
 }
 .CVCNUMBER {
   position: absolute;
-  top: 285px;
-  left: 285px;
+  top: 447px;
+  left: 441px;
   color: #000000;
 }
 .CVCS {
   position: absolute;
-  top: 285px;
-  left: 251px;
+  top: 447px;
+  left: 400px;
   color: #000000;
 }
 .CardHolderName {
   position: absolute;
-  top: 175px;
-  left: 155px;
+  top: 290px;
+  left: 180px;
   color: white;
   letter-spacing: 1px;
 }
-.MMYYDate {
+.MDate {
   position: absolute;
-  top: 175px;
-  left: 330px;
+  top: 289px;
+  left: 425.9px;
+  color: white;
+}
+.YDate {
+  position: absolute;
+  top: 289px;
+  left: 443px;
   color: white;
 }
 input {
+  height: 3em;
   text-align: center;
+  border-radius: 5px;
+  border-color: #0099ff;
+  padding: 1.5em;
+  font-family: cursive;
+}
+.confirmbtn {
+  width: 32em;
+  height: 3em;
+  font-family: cursive;
+}
+.NN {
+  width: 28em;
+  font-family: cursive;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.MY {
+  width: 10em;
+}
+.CVCInput {
+  width: 10em;
 }
 .body {
   display: flex;
   justify-content: space-around;
 }
+
 .formContainer {
   width: 50%;
-  height: 395px;
+  height: 39em;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+.thankYouForm {
+  width: 50%;
+  height: 625px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  display: none;
+}
+.h {
+  font-size: 32px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.thankYouForm > * {
+  padding: 10px;
+}
+#imgCompleteIcon {
+  width: 240px;
+}
+.continue {
+  font-size: 25px;
+  padding: 12px;
 }
 .Inputname {
   padding: 2px;
@@ -101,11 +162,36 @@ input {
   justify-content: space-around;
 }
 label {
-  font-size: small;
+  font-size: 27px;
   font-family: Courier New, Courier, monospace;
 }
 button {
   width: 220px;
   background-color: #0561c9;
   color: white;
+  padding: 2px;
+  border-radius: 10px;
+}
+button:hover {
+  box-shadow: 1px 1px 5px #0561c9;
+  color: #ffe600;
+}
+button:active {
+  box-shadow: 0 0 10px #15ff00;
+}
+input:focus {
+  color: #002ab3;
+  border-color: red;
+  box-shadow: 0px 0px 6px red;
+}
+button:focus {
+  box-shadow: 0 0 10px #15ff00;
+}
+
+.smfont {
+  font-size: 17px;
+}
+.errorMessage {
+  font-size: 11px;
+  color: lightcoral;
 }

@@ -10,51 +10,87 @@
 
 <body>
     <div class="body">
+
+        <!-- image content -->
         <div class="content">
             <img id="img" src="folder/images/bg-main-desktop.png" alt="">
+
             <img class="img1" id="front" src="folder/images/bg-card-front.png" alt="">
+
             <img class="img1" id="back" src="folder/images/bg-card-back.png" alt="">
+
             <p class="BankName">Master Card</p>
-            <p class="f">6362 1411 2609 7592 </p>
-            <p class="CardHolderName"><small>Mahdi Hasanzadeh</small></p>
-            <p class="MMYYDate"><small>09/09</small></p>
-            <p class="CVCS"><small>CVC:</small></p>
-            <p class="CVCNUMBER"><small>5782</small></p>
-            <p class="Debit">Debit Card</p>
+
+            <p class="f smfont" id="CN">Card Number</p>
+
+            <p class="CardHolderName smfont" id="CardName">Your Name</p>
+
+            <p class="MDate smfont" id="M">12</p>
+            <p class="YDate smfont" id="Y">/12</p>
+
+            <p class="CVCS smfont">CVC:</p>
+
+            <p class="CVCNUMBER smfont" id="cv">5782</p>
+
+            <p class="Debit"><b>Debit Card</b></p>
         </div>
-        <div class="formContainer">
+
+        <!--  form details  -->
+
+        <div class="formContainer" id="form">
             <div class="form">
+
                 <div class="Inputname">
-                    <label for="cardHolder">* CARDHOLDER NAME</label>
+                    <label for="cardHolder">*CARDHOLDER NAME</label>
                     <br>
-                    <input name="cardHolder" required size="28px" type="text" placeholder="e.g. Mahdi Hasanzadeh">
+                    <input onkeyup="nameKeyPress()" class="NN" id="name" title="max-length:25character" name="cardHolder" maxlength="25character"
+                        required size="28px" type="text" placeholder="e.g. Mahdi Hasanzadeh">
+                    <p id="errorName" class="errorMessage"></p>
                 </div>
                 <br>
+
                 <div class="CardInput">
-                    <label for="">* CARD NUMBER</label>
+                    <label for="">*CARD NUMBER</label>
                     <br>
-                    <input type="text" required size="28px" placeholder="e.g. 1234 4567 8912 0000">
-                    <p style="font-size: 11px; color: lightcoral;"><small>Wrong format, number only</small></p>
+                    <input id="cardNumber" class="NN" title="min/max:16 numbers" onkeyup="cardNumberOnChange()" maxlength="16" type="text" required
+                        size="28px" placeholder="e.g. 1234 4567 8912 0000">
+                    <p id="error" class="smfont errorMessage"></p>
                 </div>
                 <br>
+
+
                 <div class="wrap">
                     <div class="cardExp">
-                        <label for="">* EXP.DATE<samll>(MM/YY)</samll></label>
+                        <label for="">*EXP.DATE(MM/YY)</label>
                         <br>
-                        <input type="text" required name="" id="" size="5px" placeholder="MM">
-                        <input type="text" required placeholder="YY" size="5px">
+                        <input class="MY" onkeyup="monthFunc()" maxlength="2" type="text" required id="Month" size="5px" placeholder="MM">
+                        <input class="MY" onkeyup="yearFunc()" maxlength="2" type="text" required id="Year" placeholder="YY" size="5px">
+                        <p class="errorMessage" id="e"></p>
                     </div>
+
+
                     <div class="CVC">
-                        <label for="">* CVC</label>
+                        <label for="">*CVC</label>
                         <br>
-                        <input size="5px" required type="text" placeholder=" e.g. 123">
+                        <input class="CVCInput" onkeyup="cvcFunc()" minlength="3" maxlength="4" size="5px" required type="text" id="cvc" placeholder=" e.g. 123">
+                        <p class="smfont errorMessage" id="cvcError"></p>
                     </div>
                 </div>
+
                 <br>
-                <button>Confirm</button>
+
+                <!-- <button onclick="change()"> Confirm </button> -->
+                <button class="confirmbtn" onclick="isValid()" type="submit">Confirm</button>
             </div>
+        </div>
+        <div class="thankYouForm" id="thankYouForm">
+            <img id="imgCompleteIcon" src="folder/images/completeIcon/completeIcon.jpg" alt="">
+            <h1>THANK YOU</h1>
+            <h2 class="h">We've added your card details</h2>
+            <button class="continue" onclick="homePage()">Continue</button>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 
 </html>
