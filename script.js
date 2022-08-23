@@ -131,7 +131,7 @@ function yearFunc() {
 function cvcFunc() {
   var cvc = document.getElementById("cvc").value;
   var text;
-  if ((cvc.length > 2 && cvc.length <= 4) && !isNaN(cvc)) {
+  if (cvc.length > 2 && cvc.length <= 4 && !isNaN(cvc)) {
     document.getElementById("cv").innerHTML = cvc;
     document.getElementById("cvcError").innerHTML = "";
     text = true;
@@ -141,4 +141,14 @@ function cvcFunc() {
     text = false;
   }
   return text;
+}
+
+function TimeDate() {
+  var date = new Date().toLocaleDateString();
+  document.getElementById("date").innerHTML = "Date: " + date;
+  var x = setInterval(timeFunc, 1000);
+  function timeFunc() {
+    var time = new Date().toLocaleTimeString();
+    document.getElementById("clock").innerHTML = "Time: " + time;
+  }
 }

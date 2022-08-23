@@ -134,6 +134,22 @@ input {
   font-weight: bold;
   display: none;
 }
+.Date {
+  font-style: oblique;
+  font-size: 25px;
+  position: absolute;
+  color: #ff7b00;
+  left: 100px;
+  top: 30px;
+}
+.clock {
+  font-style: oblique;
+  font-size: 25px;
+  position: absolute;
+  color: #ff7b00;
+  left: 100px;
+  top: 60px;
+}
 .h {
   font-size: 32px;
   margin-bottom: 18px;
