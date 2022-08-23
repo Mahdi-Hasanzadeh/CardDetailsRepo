@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin: auto;
 }
 .body {
   display: flex;
@@ -98,7 +97,7 @@ input {
 .NN {
   width: 28em;
   font-family: cursive;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bolder;
 }
 .MY {
@@ -111,7 +110,12 @@ input {
   display: flex;
   justify-content: space-around;
 }
-
+.frontBackImageContainer {
+  position: absolute;
+  top: -10px;
+  left: -45px;
+  width: 594px;
+}
 .formContainer {
   width: 50%;
   height: 39em;
