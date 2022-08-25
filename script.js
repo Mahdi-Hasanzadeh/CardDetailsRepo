@@ -60,8 +60,7 @@ function cardNumberOnChange() {
       document.getElementById("CN").innerHTML = cardNumber;
       document.getElementById("error").innerHTML = "";
       if (cardNumber.length < 16) {
-        document.getElementById("error").innerHTML =
-          "too short (min/max length:16)";
+        document.getElementById("error").innerHTML = "too short(length:16)";
         text = false;
       } else {
         text = true;
@@ -122,8 +121,7 @@ function yearFunc() {
     document.getElementById("e").innerHTML = "";
   } else {
     text = false;
-    document.getElementById("e").innerHTML =
-      "Date Expired. Year:" + new Date().getFullYear();
+    document.getElementById("e").innerHTML = "Date Expired";
   }
   return text;
 }
@@ -136,8 +134,7 @@ function cvcFunc() {
     document.getElementById("cvcError").innerHTML = "";
     text = true;
   } else {
-    document.getElementById("cvcError").innerHTML =
-      "Only Number(min-length:2,max-length:4)";
+    document.getElementById("cvcError").innerHTML = "Only Number(min:2,max:4)";
     text = false;
   }
   return text;

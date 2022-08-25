@@ -3,6 +3,117 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container {
+  /* background: red; */
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+#img {
+  height: 100vh;
+}
+.img1 {
+  width: 60%;
+}
+#imgCompleteIcon {
+  width: 20%;
+}
+
+.frontBackImageContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 6%;
+  left: 12%;
+}
+
+.frontBackImageContainer > * {
+  padding: 0.3em;
+}
+
+.wrap1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#thankYouForm {
+  display: none;
+}
+.formContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  font-size: 1.8em;
+  color: rgb(247, 241, 240);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form input {
+  background: linear-gradient(135deg, #71b7e6, #fcfcfc);
+  height: 3.3em;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 1em;
+}
+.form label {
+  font-size: 0.75em;
+  text-transform: capitalize;
+  text-align: center;
+  padding-right: 1em;
+}
+.form input:focus {
+  box-shadow: 2px 2px 5px greenyellow;
+}
+.pad {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0.5em;
+}
+.confirmbtn {
+  padding: 1em;
+  border: none;
+  outline: none;
+  border-radius: 1em;
+  background: #8c00ff;
+  color: white;
+  font-size: 0.6em;
+  width: 25em;
+}
+.smfont {
+  padding-left: 0.5em;
+  font-size: 0.5em;
+  color: #f0acc6;
+}
+.sizeName {
+  width: 22em;
+}
+.sizeCard {
+  width: 24.5em;
+}
+.MY {
+  width: 9.8em;
+}
+.CVCInput {
+  width: 29.5em;
+}
+.btnConfirm {
+  text-align: center;
+}
+
+/* .con{
+  width: 75%;
+  margin: 0 auto;
+}
 .body {
   padding: 0 45px;
   font-family: Arial, Helvetica, sans-serif;
@@ -92,15 +203,16 @@ input {
   border-color: #0099ff;
   padding: 1.5em;
   /* font-family: cursive; */
-}
+
+/*
 .confirmbtn {
   width: 29em;
   height: 3em;
-  /* font-family: cursive; */
+  /* font-family: cursive; 
 }
 .NN {
   width: 28em;
-  /* font-family: cursive; */
+  /* font-family: cursive; 
   font-size: 13px;
   font-weight: bolder;
 }
@@ -214,4 +326,4 @@ button:focus {
 .errorMessage {
   font-size: 11px;
   color: lightcoral;
-}
+} */
