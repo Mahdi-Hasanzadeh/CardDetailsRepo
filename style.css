@@ -19,11 +19,60 @@ body {
   .frontBackImageContainer {
     margin-left: 1.4em;
   }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: red;
+  }
+  .BankName {
+    position: absolute;
+    top: 23%;
+    left: 15%;
+    text-shadow: 1px 1px 10px red;
+    font-size: 1.5em;
+  }
+  .f {
+    position: absolute;
+    top: 35%;
+    left: 9%;
+    font-size: 1em;
+    color: white;
+  }
+  .CardHolderName {
+    position: absolute;
+    top: 48%;
+    left: 1%;
+    color: white;
+  }
+  .MDate {
+    position: absolute;
+    top: 48%;
+    left: 47%;
+    color: white;
+  }
+  .YDate {
+    position: absolute;
+    top: 48%;
+    left: 52%;
+    color: white;
+  }
+  .CVCS {
+    position: absolute;
+    top: 75%;
+    left: 36%;
+  }
+  .CVCNUMBER {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+  }
 }
 
 .container {
   width: 80%;
   max-width: 1200px;
+  min-width: 500px;
   margin: 0 auto;
 }
 .wrap1 {
