@@ -13,10 +13,9 @@
         <div class="wrap1">
             <!-- image content -->
             <div class="content">
-                <div class="relativeContainer">
-                    <img id="img" src="folder/images/bg-main-desktop.png" alt="">
-                </div>
+                <img id="img" src="folder/images/bg-main-desktop.png" alt="">
                 <div class="frontBackImageContainer">
+                    <p id="top"></p>
                     <p class="Date" id="date"></p>
 
                     <p class="clock" id="clock"></p>
@@ -27,17 +26,17 @@
 
                     <p class="BankName">Master Card</p>
 
-                    <p class="f smfont" id="CN">Card Number</p>
+                    <p class="f" id="CN"></p>
 
-                    <p class="CardHolderName smfont" id="CardName">Your Name</p>
+                    <p class="CardHolderName" id="CardName">Name</p>
 
-                    <p class="MDate smfont" id="M">12</p>
+                    <p class="MDate" id="M"></p>
 
-                    <p class="YDate smfont" id="Y">/12</p>
+                    <p class="YDate" id="Y"></p>
 
-                    <p class="CVCS smfont">CVC:</p>
+                    <p class="CVCS">CVC:</p>
 
-                    <p class="CVCNUMBER smfont" id="cv">5782</p>
+                    <p class="CVCNUMBER" id="cv"></p>
 
                     <p class="Debit"><b>Debit Card</b></p>
                 </div>
@@ -48,23 +47,23 @@
                 <div class="form">
                     <div class="pad">
                         <label for="cardHolder">*Cardholder Name:</label>
-                        <input onkeyup="nameKeyPress()" class="NN sizeName" id="name" title="max-length:25character" name="cardHolder" maxlength="25character"
-                            required type="text" placeholder="e.g. Mahdi Hasanzadeh">
+                        <input onchange="nameKeyPress()" onkeyup="writeNameOnCard()" class="NN sizeName" id="name" title="max-length:25character"
+                            name="cardHolder" maxlength="25character" type="text" placeholder="e.g. Mahdi Hasanzadeh">
                         <p id="errorName" class="smfont errorMessage"></p>
                     </div>
                     <div class="pad">
                         <label for="">*Card Number:</label>
-                        <input id="cardNumber" class="NN sizeCard" title="min/max:16 numbers" onkeyup="cardNumberOnChange()" maxlength="16" type="text"
-                            required placeholder="e.g. 1234 4567 8912 0000">
+                        <input id="cardNumber" class="NN sizeCard" title="min/max:16 numbers" onkeyup="writeCardNO()" onchange="cardNumberOnChange()"
+                            maxlength="16" type="text" placeholder="e.g. 1234 4567 8912 0000">
                         <p id="error" class="smfont errorMessage"></p>
                     </div>
                     <div class="pad">
                         <label for="">*Exp.Date(MM/YY):</label>
-
-                        <input class="MY" onkeyup="monthFunc()" maxlength="2" type="text" required id="Month" placeholder="MM">
-                        <input class="MY" onkeyup="yearFunc()" maxlength="2" type="text" required id="Year" placeholder="YY">
-                        <p class="smfont errorMessage" id="e"></p>
-
+                        <div class="fd">
+                            <input class="MY" onkeyup="monthFunc()" maxlength="2" type="text" required id="Month" placeholder="MM">
+                            <input class="MY" onkeyup="yearFunc()" maxlength="2" type="text" required id="Year" placeholder="YY">
+                            <p class="smfont errorMessage" id="e"></p>
+                        </div>
                     </div>
                     <div class="pad">
                         <label for="">*CVC:</label>
@@ -77,9 +76,14 @@
                     </div>
                 </div>
             </div>
+
             <div class="thankYouForm" id="thankYouForm">
+                <img id="imgCompleteIcon" src="completeIcon.jpg" alt="">
+                <h2>THANK YOU</h2>
+                <h3>We've added your card details</h3>
+                <button onclick="homePage()" class="conBtn">Continue</button>
+            </div>
         </div>
-    </div>
 </body>
 <script src="script.js"></script>
 

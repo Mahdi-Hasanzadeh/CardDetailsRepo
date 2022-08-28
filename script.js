@@ -7,7 +7,9 @@ function change() {
     return true;
   }
 }
-
+window.addEventListener("resize", function() {
+  console.log("size:" + window.innerWidth);
+});
 // Validation
 function isValid() {
   if (
@@ -21,6 +23,22 @@ function isValid() {
     document.getElementById("e").innerHTML = "";
     document.getElementById("errorName").innerHTML = "";
     document.getElementById("cvcError").innerHTML = "";
+
+    var cardNumber = document.getElementById("cardNumber").value;
+    var parts = [];
+    for (var i = 0; i < cardNumber.length; i += 4) {
+      parts.push(cardNumber.substring(i, i + 4));
+    }
+    document.getElementById("CN").innerHTML = "";
+    for (var i = 0; i < parts.length; i++) {
+      if (i == 3) {
+        document.getElementById("CN").innerHTML += parts[i];
+        continue;
+      }
+      document.getElementById("CN").innerHTML += parts[i] + "-";
+    }
+    console.log(parts);
+    window.top;
     change();
   } else {
     if (document.getElementById("name").value == "") {
@@ -51,59 +69,67 @@ function homePage() {
     document.location.reload();
   }
 }
-//Card number input field
-function cardNumberOnChange() {
+function writeCardNO() {
   var cardNumber = document.getElementById("cardNumber").value;
-  var text;
-  for (var i = 0; i < cardNumber.length; i++) {
-    if (cardNumber.charCodeAt(i) >= 48 && cardNumber.charCodeAt(i) <= 57) {
-      document.getElementById("CN").innerHTML = cardNumber;
-      document.getElementById("error").innerHTML = "";
-      if (cardNumber.length < 16) {
-        document.getElementById("error").innerHTML = "too short(length:16)";
-        text = false;
-      } else {
-        text = true;
-      }
-    } else {
-      document.getElementById("error").innerHTML = "Wrong Format, only number";
-      text = false;
-    }
-  }
-
-  return text;
+  document.getElementById("CN").innerHTML = cardNumber;
 }
 
-// Name input field
-function nameKeyPress() {
-  var name = document.getElementById("name").value;
-  var txt = "";
-  for (var i = 0; i < name.length; i++) {
-    if (
-      (name.charCodeAt(i) >= 65 && name.charCodeAt(i) <= 122) ||
-      name.charCodeAt(i) == 32
-    ) {
-      document.getElementById("CardName").innerHTML = name;
-      document.getElementById("errorName").innerHTML = "";
-      txt = true;
+//Card number input field validation
+function cardNumberOnChange() {
+  var cardNumber = document.getElementById("cardNumber").value;
+  for (var i = 0; i < cardNumber.length; i++) {
+    if (cardNumber.charCodeAt(i) >= 48 && cardNumber.charCodeAt(i) <= 57) {
+      document.getElementById("error").innerHTML = "";
     } else {
-      document.getElementById("CardName").innerHTML = name;
-      document.getElementById("errorName").innerHTML = "Wrong Format";
-      txt = false;
+      document.getElementById("error").innerHTML = "Wrong Format,only number";
+      return false;
     }
   }
-  return txt;
+  if (cardNumber.length < 16) {
+    document.getElementById("error").innerHTML = "Card NO. too short";
+    return false;
+  }
+
+  return true;
+}
+
+function writeNameOnCard() {
+  var name = document.getElementById("name").value;
+  document.getElementById("CardName").innerHTML = name;
+}
+
+// Name input field validation
+function nameKeyPress() {
+  var text = false;
+  var name = document.getElementById("name").value;
+  for (var i = 0; i < name.length; i++) {
+    // confirm(name.charCodeAt(i));
+    if (
+      (name.charCodeAt(i) >= 65 && name.charCodeAt(i) <= 90) ||
+      (name.charCodeAt(i) >= 97 && name.charCodeAt(i) <= 122) ||
+      name.charCodeAt(i) == 32
+    ) {
+      document.getElementById("errorName").innerHTML = "";
+    } else {
+      document.getElementById("errorName").innerHTML = "Wrong Format";
+      return false;
+    }
+  }
+  return true;
 }
 function monthFunc() {
   var month = document.getElementById("Month").value;
   var text;
   if (month <= 12) {
     document.getElementById("e").innerHTML = "";
-    if (month < 10) {
-      document.getElementById("M").innerHTML = "0" + month;
+    if (month == 0) {
+      text = false;
+      document.getElementById("e").innerHTML = "Month can not be Zero";
+    } else if (month < 10) {
+      document.getElementById("M").innerHTML = "0" + month + "/";
       text = true;
     } else {
-      document.getElementById("M").innerHTML = month;
+      document.getElementById("M").innerHTML = month + "/";
       text = true;
     }
   } else {
@@ -117,7 +143,7 @@ function yearFunc() {
   var text;
   if (year >= 22) {
     text = true;
-    document.getElementById("Y").innerHTML = "/" + year;
+    document.getElementById("Y").innerHTML = " " + year;
     document.getElementById("e").innerHTML = "";
   } else {
     text = false;

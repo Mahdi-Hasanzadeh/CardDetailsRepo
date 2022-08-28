@@ -6,12 +6,32 @@
 body {
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
+@media screen and (max-width: 870px) {
+  .wrap1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #img {
+    width: 70vw;
+  }
+  .frontBackImageContainer {
+    margin-left: 1.4em;
+  }
+}
+
 .container {
-  /* background: red; */
   width: 80%;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
 }
+.wrap1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #img {
   height: 100vh;
 }
@@ -19,14 +39,32 @@ body {
   width: 60%;
 }
 #imgCompleteIcon {
-  width: 20%;
+  width: 25%;
+}
+#thankYouForm {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-size: 1.8em;
+  color: rgb(247, 241, 240);
+  text-align: center;
+  display: none;
+}
+
+#thankYouForm h2,
+h3 {
+  margin-top: 0.2em;
+  color: #66eb66;
 }
 
 .frontBackImageContainer {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 6%;
+  top: 17%;
   left: 12%;
 }
 
@@ -34,14 +72,6 @@ body {
   padding: 0.3em;
 }
 
-.wrap1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#thankYouForm {
-  display: none;
-}
 .formContainer {
   height: 100vh;
   display: flex;
@@ -73,14 +103,41 @@ body {
   box-shadow: 2px 2px 5px greenyellow;
 }
 .pad {
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   align-items: baseline;
   padding: 0.5em;
 }
+@media screen and (max-width: 1130px) {
+  .pad {
+    flex-direction: column;
+    padding: 0.2em 0;
+  }
+  .fd > input {
+    width: 13.8em;
+  }
+  .btnConfirm > button {
+    width: 20em;
+  }
+}
+@media screen and (min-width: 1275px) and (max-width: 1620px) {
+  .frontBackImageContainer {
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 1621px) and (max-width: 2100px) {
+  .frontBackImageContainer {
+    left: 30%;
+  }
+  .container {
+    zoom: 150%;
+  }
+}
+
 .confirmbtn {
-  padding: 1em;
+  margin-top: 2px;
+  padding: 0.7em;
   border: none;
   outline: none;
   border-radius: 1em;
@@ -88,6 +145,17 @@ body {
   color: white;
   font-size: 0.6em;
   width: 25em;
+}
+.conBtn {
+  width: 20em;
+  padding: 1em;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.5em;
+  margin-top: 0.4em;
 }
 .smfont {
   padding-left: 0.5em;
@@ -110,6 +178,57 @@ body {
   text-align: center;
 }
 
+.BankName {
+  position: absolute;
+  top: 23%;
+  left: 15%;
+  text-shadow: 1px 1px 10px red;
+  font-size: 1.5em;
+}
+.f {
+  position: absolute;
+  top: 35%;
+  left: 9%;
+  font-size: 1.3em;
+  color: white;
+}
+.CardHolderName {
+  position: absolute;
+  top: 48%;
+  left: 1%;
+  color: white;
+}
+.MDate {
+  position: absolute;
+  top: 48%;
+  left: 47%;
+  color: white;
+}
+.YDate {
+  position: absolute;
+  top: 48%;
+  left: 52%;
+  color: white;
+}
+.CVCS {
+  position: absolute;
+  top: 75%;
+  left: 36%;
+}
+.CVCNUMBER {
+  position: absolute;
+  top: 75%;
+  left: 45%;
+}
+.Debit {
+  position: absolute;
+  top: 91%;
+  left: 1%;
+}
+#date,
+#clock {
+  color: white;
+}
 /* .con{
   width: 75%;
   margin: 0 auto;
